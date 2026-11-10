@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel Macro — Brasil & EUA</title>
+<link rel="stylesheet" href="/static/style.css">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="wrap head">
+    <div>
+      <h1>Painel Macroeconômico</h1>
+      <p class="sub">Brasil &amp; EUA · BCB/SGS, IBGE/SIDRA, FRED · cache de 6h</p>
+    </div>
+    <div class="controls">
+      <div class="seg" id="periodo" role="group" aria-label="Janela de tempo">
+        <button data-anos="1">12m</button><button data-anos="2">2a</button>
+        <button data-anos="5" class="on">5a</button><button data-anos="10">10a</button>
+        <button data-anos="0">Máx</button>
+      </div>
+      <button id="refresh" class="ghost" title="Limpar cache e recarregar">↻ Atualizar</button>
+    </div>
+  </div>
+  <nav class="wrap tabs" id="tabs">
+    <button data-aba="inflacao" class="on">Inflação e Juros</button>
+    <button data-aba="atividade">Atividade e Emprego</button>
+    <button data-aba="externo">Externo e Câmbio</button>
+    <button data-aba="eua">Macro EUA</button>
+  </nav>
+</header>
+<main class="wrap">
+  <section class="kpis" id="kpis"></section>
+  <section class="grid" id="grid"></section>
+</main>
+<footer class="wrap">Séries marcadas <span class="tag sim">Simulado</span> usam dados gerados (fonte indisponível ou sem API pública). Downloads em CSV (separador “;”, decimal “,”).</footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

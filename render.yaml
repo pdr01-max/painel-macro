@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: dashboard-macro
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: FRED_API_KEY
+        sync: false  # preencher no painel do Render
